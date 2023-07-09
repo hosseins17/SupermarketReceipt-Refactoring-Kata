@@ -30,6 +30,7 @@ public:
         return result;
     }
 
+private:
     std::string presentReceiptItem(const ReceiptItem &item) const
     {
         std::string price = getFormattedNumberAsString(item.getTotalPrice(), 2);
@@ -78,8 +79,6 @@ public:
                ? getFormattedNumberAsString(item.getQuantity(), 0)
                : getFormattedNumberAsString(item.getQuantity(), 3);
     }
-
-private:
 
     static std::string getFormattedNumberAsString(double number, int precision)
     {
