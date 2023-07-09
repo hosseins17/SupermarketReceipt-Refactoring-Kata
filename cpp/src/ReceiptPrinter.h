@@ -11,11 +11,7 @@ class ReceiptPrinter
 {
 
 public:
-    ReceiptPrinter() : ReceiptPrinter(40)
-    {
-    }
-
-    ReceiptPrinter(int columns) : columns(columns)
+    ReceiptPrinter(int columns = 40) : columns(columns)
     {}
 
     std::string printReceipt(const Receipt &receipt)
